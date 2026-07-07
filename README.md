@@ -18,13 +18,8 @@ Local deployment based on the DeepShare browser extension. Use directly on your 
 ## 快速开始
 
 ```bash
-# 1. 安装依赖
-pip install -r requirements.txt
-
-# 2. 启动服务
-python server.py
-
-# Windows 用户也可以双击 start.bat
+双击setup.bat安装
+python server.py / 双击 start.bat
 ```
 
 ## 手动部署
@@ -37,10 +32,8 @@ python server.py
 
 ```bash
 pip install -r requirements.txt
-python server.py
+python server.py / 双击 start.bat
 ```
-
-Windows 用户也可以双击 `start.bat`。
 
 ## 配置 DeepShare 扩展
 
@@ -54,7 +47,7 @@ Windows 用户也可以双击 `start.bat`。
 
 配置完成后，在 DeepSeek 对话页点击 **转文档** 即可使用。
 
-## 自定义 Word 样式
+## 自定义 Word 样式（可选）
 
 生成的 DOCX 样式由模板文件控制：
 
@@ -72,16 +65,11 @@ templates/reference.docx    ← 用 Word 打开并修改此文件
 
 修改后保存，重启服务即生效。
 
-## 自定义 Lua 过滤器
+## 自定义 Lua 过滤器（可选）
 
 Lua 过滤器用于在转换过程中修改文档结构：
 
 ```
-filters/disable-auto-numbering.lua    ← 将有序列表转为纯文本段落
+filters/disable-auto-numbering.lua    
 ```
 
-在扩展设置中勾选 **「禁用自动编号」** 即可启用。
-
-## 许可
-
-本项目是 [DeepShare](https://github.com/Yorick-Ryu/deep-share) 的扩展，遵循原项目的开源协议。
