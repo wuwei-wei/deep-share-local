@@ -17,27 +17,16 @@ Local deployment based on the DeepShare browser extension. Use directly on your 
 ## 快速开始
 
 ```bash
+# Windows 用户也可以双击 start.bat
+
+#手动配置
+#下载pandoc[pandoc](https://github.com/jgm/pandoc)  
 # 1. 安装 Python 依赖
 pip install -r requirements.txt
-
 # 2. 启动服务
-python server.py
+python server.py / 双击start.bat
 
-# Windows 用户也可以双击 start.bat
-```
-
-启动后会看到：
-
-```
-╔══════════════════════════════════════════════╗
-║   DeepShare Local DOCX Server                ║
-║   http://localhost:5050                      ║
-║                                              ║
-║   Endpoints:                                 ║
-║     POST /convert-text    → Markdown → DOCX  ║
-║     GET  /templates       → template list    ║
-║     GET  /...quota        → unlimited quota  ║
-╚══════════════════════════════════════════════╝
+之后可正常在浏览器中使用
 ```
 
 ## 配置 DeepShare 扩展
