@@ -16,18 +16,17 @@ Local deployment based on the DeepShare browser extension. Use directly on your 
 
 ## 快速开始
 
-```bash
+bash
 # Windows 用户也可以双击 start.bat
 
 #手动配置
-#下载pandoc[pandoc](https://github.com/jgm/pandoc)  
+#下载[pandoc](https://github.com/jgm/pandoc)  
 # 1. 安装 Python 依赖
 pip install -r requirements.txt
 # 2. 启动服务
 python server.py / 双击start.bat
-
 之后可正常在浏览器中使用
-```
+
 
 ## 配置 DeepShare 扩展
 
