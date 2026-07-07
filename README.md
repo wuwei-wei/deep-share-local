@@ -1,7 +1,8 @@
 # deep-share-local
-Local deployment based on the DeepShare browser extension. Use directly on your local computer, bypassing the fee.
-[DeepShare](https://github.com/Yorick-Ryu/deep-share) 的本地转换扩展，用自建 Pandoc 服务替代原项目的付费 API，实现 DeepSeek 等 AI 对话的 Markdown → Word (DOCX) 免费转换。
 
+Local deployment based on the DeepShare browser extension. Use directly on your local computer, bypassing the fee.
+
+[DeepShare](https://github.com/Yorick-Ryu/deep-share) 的本地转换扩展，用自建 Pandoc 服务替代原项目的付费 API，实现 DeepSeek 等 AI 对话的 Markdown → Word (DOCX) 免费转换。
 
 ## 原理
 
@@ -11,23 +12,36 @@ Local deployment based on the DeepShare browser extension. Use directly on your 
 
 | 依赖 | 安装方式 |
 |------|----------|
-| **Python** ≥ 3.10 | `https://www.python.org/downloads/` |
-| **Pandoc** | `https://pandoc.org/installing.html`（Windows 下载 `.msi` 安装包） |
+| **Python** ≥ 3.10 | https://www.python.org/downloads/ |
+| **Pandoc** | https://pandoc.org/installing.html （Windows 下载 `.msi` 安装包） |
 
 ## 快速开始
 
-Windows 用户也可以双击 start.bat
+```bash
+# 1. 安装依赖
+pip install -r requirements.txt
 
-手动部署
-1. 安装 Pandoc
+# 2. 启动服务
+python server.py
+
+# Windows 用户也可以双击 start.bat
+```
+
+## 手动部署
+
+### 1. 安装 Pandoc
 
 从 [Pandoc 官网](https://pandoc.org/installing.html) 下载安装包并安装。
 
-2. 安装依赖并启动
-pip install -r requirements.txt
-python server.py / 双击start.bat
+### 2. 安装依赖并启动
 
 ```bash
+pip install -r requirements.txt
+python server.py
+```
+
+Windows 用户也可以双击 `start.bat`。
+
 ## 配置 DeepShare 扩展
 
 1. 打开浏览器中 DeepShare 扩展的弹窗
@@ -36,9 +50,9 @@ python server.py / 双击start.bat
 | 设置项 | 值 |
 |--------|-----|
 | **Server URL** | `http://localhost:5050` |
-| **API Key** | 任意填写（如 123），本地不验证 |
+| **API Key** | 任意填写（如 `123`），本地不验证 |
 
-配置完成后，在 DeepSeek 对话页点击 转文档 即可使用。
+配置完成后，在 DeepSeek 对话页点击 **转文档** 即可使用。
 
 ## 自定义 Word 样式
 
@@ -56,13 +70,18 @@ templates/reference.docx    ← 用 Word 打开并修改此文件
 - **表格样式**（Table Grid）：表格边框
 - **页眉/页脚**
 
+修改后保存，重启服务即生效。
 
 ## 自定义 Lua 过滤器
 
 Lua 过滤器用于在转换过程中修改文档结构：
 
 ```
-filters/disable-auto-numbering.lua    
+filters/disable-auto-numbering.lua    ← 将有序列表转为纯文本段落
 ```
 
+在扩展设置中勾选 **「禁用自动编号」** 即可启用。
 
+## 许可
+
+本项目是 [DeepShare](https://github.com/Yorick-Ryu/deep-share) 的扩展，遵循原项目的开源协议。
