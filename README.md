@@ -18,16 +18,16 @@ Local deployment based on the DeepShare browser extension. Use directly on your 
 
 Windows 用户也可以双击 start.bat
 
+手动部署
 1. 安装 Pandoc
 
 从 [Pandoc 官网](https://pandoc.org/installing.html) 下载安装包并安装。
 
 2. 安装依赖并启动
+pip install -r requirements.txt
+python server.py / 双击start.bat
 
 ```bash
-pip install -r requirements.txt
-python server.py
-
 ## 配置 DeepShare 扩展
 
 1. 打开浏览器中 DeepShare 扩展的弹窗
