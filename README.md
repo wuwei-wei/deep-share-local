@@ -16,13 +16,13 @@ Local deployment based on the DeepShare browser extension. Use directly on your 
 
 ## 快速开始
 
-## Windows 用户也可以双击 start.bat
+Windows 用户也可以双击 start.bat
 
-### 1. 安装 Pandoc
+1. 安装 Pandoc
 
 从 [Pandoc 官网](https://pandoc.org/installing.html) 下载安装包并安装。
 
-### 2. 安装依赖并启动
+2. 安装依赖并启动
 
 ```bash
 pip install -r requirements.txt
