@@ -13,7 +13,6 @@ Local deployment based on the DeepShare browser extension. Use directly on your 
 | 依赖 | 安装方式 |
 |------|----------|
 | **Python** ≥ 3.10 | https://www.python.org/downloads/ |
-| **Pandoc** | https://pandoc.org/installing.html （Windows 下载 `.msi` 安装包） |
 
 ## 快速开始
 
