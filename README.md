@@ -18,6 +18,7 @@ Local deployment based on the DeepShare browser extension. Use directly on your 
 ## 快速开始
 
 ```bash
+克隆项目
 双击setup.bat安装
 python server.py / 双击 start.bat
 ```
